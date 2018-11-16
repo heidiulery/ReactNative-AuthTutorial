@@ -3,13 +3,14 @@ import { View } from 'react-native';
 import firebase from 'firebase';
 import { Header, Button, CardSection, Spinner } from './components/common';
 import LoginForm from './components/LoginForm';
+import { apiKey } from './env';
 
 class App extends Component {
   state = { loggedIn: null };
 
   componentDidMount() {
     firebase.initializeApp({
-      apiKey: "AIzaSyDCVv5WbVm6bM1HVvsF0Xs4RA_QLC99WOA",
+      apiKey: `${apiKey}`,
       authDomain: "auth-c36b3.firebaseapp.com",
       databaseURL: "https://auth-c36b3.firebaseio.com",
       projectId: "auth-c36b3",
